@@ -1,7 +1,96 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Netflix" x:Class="Netflix.MainPage">
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Netflix" x:Class="Netflix.MainPage" BackgroundColor="Black">
+    <ScrollView VerticalScrollBarVisibility="Default">
+        <StackLayout>
+            <StackLayout>
+                <local:HeaderTemplete />
+            </StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Text="Añadidos recientemente" TextColor="White" FontSize="Small" FontAttributes="Bold" Margin="10" />
+                <StackLayout Grid.Row="1">
+                    <CollectionView x:Name="newShows" VerticalOptions="Fill" ItemsLayout="{x:Static ListItemsLayout.HorizontalList}" HeightRequest="180">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Padding="4">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="180" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="90" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="{Binding }" />
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+                <Label Grid.Row="2" Text="Tendencias ahora" TextColor="White" FontSize="Small" FontAttributes="Bold" Margin="10" />
+                <StackLayout Grid.Row="3">
+                    <CollectionView x:Name="popularShows" VerticalOptions="Fill" ItemsLayout="{x:Static ListItemsLayout.HorizontalList}" HeightRequest="180">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Padding="4">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="180" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="90" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="{Binding }" />
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+                <Label Grid.Row="4" Text="Disponible ahora" TextColor="White" FontSize="Small" FontAttributes="Bold" Margin="10" />
+                <Image Grid.Row="5" Source="banner4.jpg" Aspect="AspectFill" />
+                <Grid Grid.Row="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="White" Padding="25,8">
+                        <Image Source="icon_play.png" HeightRequest="15" />
+                        <Label Text="Reproducir" FontSize="Micro" TextColor="Black" FontAttributes="Bold" />
+                    </StackLayout>
+                    <StackLayout Grid.Column="1" Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="#564d4d" Padding="25,8">
+                        <Image Source="icon_plus.png" HeightRequest="15" />
+                        <Label Text="Reproducir" FontSize="Micro" TextColor="White" FontAttributes="Bold" />
+                    </StackLayout>
+                </Grid>
+                <Label Grid.Row="7" Text="Popular en Netflix" TextColor="White" FontSize="Small" FontAttributes="Bold" Margin="10" />
+                <StackLayout Grid.Row="8" Margin="0,0,0,20">
+                    <CollectionView x:Name="netflixPopular" VerticalOptions="Fill" ItemsLayout="{x:Static ListItemsLayout.HorizontalList}" HeightRequest="180">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Padding="4">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="180" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="90" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="{Binding }" />
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

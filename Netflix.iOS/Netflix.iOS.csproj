@@ -134,4 +134,26 @@
       <Name>Netflix</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo%402x.png" />
+    <BundleResource Include="Resources\banner1%402x.jpg" />
+    <BundleResource Include="Resources\banner2%402x.jpg" />
+    <BundleResource Include="Resources\banner3%402x.jpg" />
+    <BundleResource Include="Resources\banner4%402x.jpg" />
+    <BundleResource Include="Resources\banner5%402x.jpg" />
+    <BundleResource Include="Resources\banner6%402x.jpg" />
+    <BundleResource Include="Resources\banner7%402x.jpg" />
+    <BundleResource Include="Resources\banner8%402x.jpg" />
+    <BundleResource Include="Resources\circular1%402x.jpg" />
+    <BundleResource Include="Resources\circular2%402x.jpg" />
+    <BundleResource Include="Resources\circular3%402x.jpg" />
+    <BundleResource Include="Resources\circular4%402x.jpg" />
+    <BundleResource Include="Resources\circular5%402x.jpg" />
+    <BundleResource Include="Resources\circular6%402x.jpg" />
+    <BundleResource Include="Resources\circular7%402x.jpg" />
+    <BundleResource Include="Resources\tituloimage%402x.jpg" />
+    <BundleResource Include="Resources\icon_plus%402x.png" />
+    <BundleResource Include="Resources\icon_info%402x.png" />
+    <BundleResource Include="Resources\icon_play%402x.png" />
+  </ItemGroup>
 </Project>
